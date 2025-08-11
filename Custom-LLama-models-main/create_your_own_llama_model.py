@@ -154,7 +154,7 @@ login(token="")  # Replace with your token
 # 2️⃣ Clone your model repo
 repo = Repository(
     local_dir="my_model_repo",
-    clone_from="RadhaShyam/my-mini-llama"  # Replace with your repo ID
+    clone_from="aratijena/my-mini-llama"  # Replace with your repo ID
 )
 
 # 3️⃣ Copy model + tokenizer files to the repo folder
@@ -177,8 +177,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 # Load model from HF Hub
-tokenizer = AutoTokenizer.from_pretrained("RadhaShyam/my-mini-llama")
-model = AutoModelForCausalLM.from_pretrained("RadhaShyam/my-mini-llama")
+tokenizer = AutoTokenizer.from_pretrained("aratijena/my-mini-llama")
+model = AutoModelForCausalLM.from_pretrained("aratijena/my-mini-llama")
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
